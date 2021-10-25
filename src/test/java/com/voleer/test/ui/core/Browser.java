@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import java.lang.reflect.InvocationTargetException;
 
-public class Browser {
+public class Browser implements IBrowser {
 
     private final WebDriver driver ;
 

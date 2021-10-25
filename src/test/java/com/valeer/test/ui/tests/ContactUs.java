@@ -4,17 +4,23 @@ import com.voleer.test.ui.core.*;
 import com.voleer.test.ui.pages.MigrationDiscoverySolutionPage;
 import com.voleer.test.ui.pages.components.ContactSalesForm;
 import org.testng.Assert;
+import org.testng.annotations.Guice;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import javax.inject.Inject;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 @Listeners(com.voleer.test.ui.core.TestListeners.class)
+@Guice(modules=GuiceDI.class)
 public class ContactUs extends BaseTest {
+
+    @Inject
+    IBrowser browser;
 
     @Test
     public void submitContactUsForm() throws Exception {
